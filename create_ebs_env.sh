@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # requires: pip install awscli awsebcli
-
 # uncomment to debug
 #set -x
 
