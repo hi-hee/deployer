@@ -1,6 +1,6 @@
 #!/bin/bash
 go get -u github.com/jvehent/pineapple
-$GOPATH/bin/pineapple <<
+$GOPATH/bin/pineapple << 
 aws:
     region: us-east-1
     accountnumber: 927034868273
@@ -10,19 +10,19 @@ components:
       type: elb
       tag:
           key: elasticbeanstalk:environment-name
-          value: invoicer-api
+          value: invoicer02-env
 
     - name: application
       type: ec2
       tag: 
           key: elasticbeanstalk:environment-name
-          value: invoicer-api
+          value: invoicer02-env
 
     - name: database
       type: rds
       tag:
           key: environment-name
-          value: invoicer-api
+          value: invoicer02-env
 
 #    - name: bastion
 #      type: ec2
