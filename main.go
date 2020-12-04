@@ -63,7 +63,7 @@ func (dplr *deployer) postWebHook(w http.ResponseWriter, r *http.Request) {
 }
 
 func testAndDeploy() {
-	testFiles, err := filepath.Glob("/app/deploymentTests/1-echotest.sh")
+	testFiles, err := filepath.Glob("/app/deploymentTests/*")
 	if err != nil {
 		panic(err)
 	}
