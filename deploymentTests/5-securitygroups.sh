@@ -1,6 +1,7 @@
 #!/bin/bash
 go get -u github.com/jvehent/pineapple
-$GOPATH/bin/pineapple << 
+echo "securitygourps.sh"
+$GOPATH/bin/pineapple << EOF
 aws:
     region: us-east-1
     accountnumber: 927034868273
