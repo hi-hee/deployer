@@ -12,19 +12,19 @@ components:
       type: elb
       tag:
           key: elasticbeanstalk:environment-name
-          value: invoicer02-env
+          value: Invoicer02-env
 
     - name: application
       type: ec2
       tag: 
           key: elasticbeanstalk:environment-name
-          value: invoicer02-env
+          value: Invoicer02-env
 
     - name: database
       type: rds
       tag:
           key: environment-name
-          value: invoicer02-env
+          value: Invoicer02-env
 
 #    - name: bastion
 #      type: ec2
