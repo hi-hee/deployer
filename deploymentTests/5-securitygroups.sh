@@ -3,7 +3,7 @@
 echo "securitygourps.sh1"
 go get -u github.com/jvehent/pineapple
 echo "securitygourps.sh"
-$GOPATH/bin/pineapple << EOF
+$GOPATH/bin/pineapple -c << EOF
 aws:
     region: us-east-2
     accountnumber: 998267510686
