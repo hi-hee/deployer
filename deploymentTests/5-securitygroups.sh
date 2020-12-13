@@ -6,7 +6,7 @@ echo "securitygourps.sh"
 $GOPATH/bin/pineapple << EOF
 aws:
     region: us-east-2
-    accountnumber: 927034868273
+    accountnumber: 998267510686
 
 components:
     - name: load-balancer
