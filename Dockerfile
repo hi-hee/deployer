@@ -7,6 +7,7 @@ RUN adduser --gid 10001 --uid 10001 \
 COPY bin/deployer /app/
 RUN mkdir /app/deploymentTests
 ADD deploymentTests /app/deploymentTests/
+RUN chmod 755 -R /app
 
 RUN apt-get update
 RUN apt-get -y upgrade
