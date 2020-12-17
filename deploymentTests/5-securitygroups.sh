@@ -37,4 +37,4 @@ rules:
     - src: bastion
       dst: database
       dport: 5432
-EOF      
+EOF
