@@ -3,18 +3,11 @@
 go get -u github.com/jvehent/pineapple
 ls -al $GOPATH/bin/
 $GOPATH/bin/pineapple <<EOF
-  
 aws:
     region: us-east-2
     accountnumber: 998267510686
 
 components:
-    - name: load-balancer
-      type: elb
-      tag:
-          key: elasticbeanstalk:environment-name
-          value: Invoicer02-env
-
     - name: application
       type: ec2
       tag: 
@@ -34,14 +27,6 @@ components:
           value: invoicer-bastion
 
 rules:
-    - src: 0.0.0.0/0
-      dst: load-balancer
-      dport: 443
-
-    - src: load-balancer
-      dst: application
-      dport: 80
-
     - src: application
       dst: database
       dport: 5432
@@ -53,5 +38,4 @@ rules:
     - src: bastion
       dst: database
       dport: 5432
-      
 EOF      
